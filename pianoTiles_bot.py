@@ -10,6 +10,18 @@ cords_x = [0, 90, 177, 251]
 
 bbox = (start_x,start_y,start_x+252,start_y + 4)
 
+def get_mouse_pos():
+    while True:
+        print(pg.position())
+        time.sleep(1)
+
+def get_pixel_color():
+    with mss() as sct:
+        img = sct.grab(bbox)
+        for cord in cords_x:
+            print(img.pixel(cord,0))
+            break
+
 def start():
     with mss() as sct:
         while True:
