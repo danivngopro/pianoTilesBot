@@ -8,7 +8,7 @@ start_y = 440
 
 cords_x = [0, 90, 177, 251]
 
-bbox = (start_x,start_y,start_x+252,start_y + 4)
+bbox = (start_x,start_y,start_x+252,start_y + 3)
 
 def test_time():
     with mss() as sct:
@@ -39,20 +39,17 @@ def start():
                 break
             img = sct.grab(bbox)
             if(b == False):
-                    print("x,y= " + str(img.pixel(c,2)) + " pixel: " + str(img.pixel(c,2)[0]))
-                    if img.pixel(c,2)[0] > 154:
+                    if img.pixel(c,2)[0] > 154 and img.pixel(c,2)[0] < 254:
                         pg.mouseUp()
-                        print("finish click")
                         b = True
             else:
                 for cord in cords_x:
                     if img.pixel(cord,0)[0] < 100:
-                        pg.moveTo(start_x+cord,start_y)
-                        pg.mouseDown()
-                        print("start click")
+                        # pg.moveTo(start_x+cord,start_y)
+                        pg.mouseDown(start_x+cord,start_y)
                         b = False
                         c = cord
-                        break
+                        # break
                     # while(True):
                     #     print("x,y= " + str(img.pixel(cord,2)) + " pixel: " + str(img.pixel(cord,2)[0]))
                     #     if img.pixel(cord,2)[0] > 154:
