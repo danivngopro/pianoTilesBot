@@ -3,6 +3,9 @@
 this bot, once activated, will automatically play piano tiles online.
 it will detect and perss the tiles on the screen.
 
+pianotiles bot 1.0: works with a single thread, iterating over the four rows on your screen.
+pianotiles bot 2.0: works with multiple threards, each one checks it's own row. => the result is a lot more speed and accuracy.
+
 
 the way it works:
 1) i have detected a small chunk on the screen there the tiles are dropping to.
