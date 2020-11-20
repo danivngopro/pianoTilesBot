@@ -21,4 +21,5 @@ alert:
   you can use get_mouse_pos and get_pixel_color to detect the colors and positions in your screen.
 
 
-link to the online piano tiles 2 i used: https://poki.co.il/g/piano-tiles-2
+link to the online piano tiles 2 i used for bots 1 and 2: https://poki.co.il/g/piano-tiles-2
+for pianotilesBot3.0 i used piano tiles 2 from microsoft store.
